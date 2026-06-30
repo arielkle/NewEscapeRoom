@@ -119,6 +119,13 @@
             modalFeedback: document.getElementById('modal-feedback')
         };
 
+        // Event listener for Enter key in input field
+        studentDOM.modalInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                checkAnswer();
+            }
+        });
+
         function showScreen(screenName) {
             Object.values(screens).forEach(s => { if (s) s.classList.add('hidden'); });
             if (screens[screenName]) screens[screenName].classList.remove('hidden');
