@@ -255,13 +255,13 @@
             // עדכון טקסטים בהתאם לסוג השלב
             if (current.type === 'intro') {
                 studentDOM.progress.innerText = `הקדמה`;
-                studentDOM.hint.innerText = "/// לחצו על האזור שסומן בתמונה כדי להתחיל במשימה ///";
+                studentDOM.stageTitle.innerHTML = '<i class="fas fa-door-open ml-1"></i> מצאו את אזור הלחיצה כדי להמשיך';
             } else if (current.type === 'end') {
                 studentDOM.progress.innerText = `סיום המשימה`;
-                studentDOM.hint.innerText = "/// לחצו על האזור שסומן כדי לדווח על הצלחה ///";
+                studentDOM.stageTitle.innerHTML = '<i class="fas fa-flag-checkered ml-1"></i> מצאו את אזור הלחיצה לסיום המשחק';
             } else {
                 studentDOM.progress.innerText = `חידה ${currentPuzzleIdx} מתוך ${puzzleCount}`;
-                studentDOM.hint.innerText = "/// מצאו את המנעול בתמונה ולחצו עליו ///";
+                studentDOM.stageTitle.innerHTML = '<i class="fas fa-search ml-1"></i> מצאו את המנעול בתמונה ולחצו עליו';
             }
             
             // עדכון אזור חם
